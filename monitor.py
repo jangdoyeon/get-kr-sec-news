@@ -358,7 +358,7 @@ def build_slack_message(results: list[BoardResult]) -> str:
         lines.append("모든 게시판에서 신규 게시글이 발견되지 않았습니다.")
 
     for result in results:
-        board_label = f"`{result.board.name}`"
+        board_label = f"*{result.board.name}* <{result.board.url}|바로가기>"
         if result.error:
             lines.append(f"- {board_label}: 조회 실패 ({result.error})")
             continue

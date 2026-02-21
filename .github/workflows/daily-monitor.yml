@@ -2,7 +2,7 @@ name: Daily Board Monitor
 
 on:
   schedule:
-    - cron: "45 15 * * *"
+    - cron: "55 15 * * *"
   workflow_dispatch:
 
 permissions:
