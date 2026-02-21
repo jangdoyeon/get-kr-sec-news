@@ -1,0 +1,70 @@
+boards:
+  - name: '한국인터넷진흥원(ISMS-P)-자료실'
+    url: 'https://isms-p.or.kr/ntcn/rcsrm/selectGnrlRcsrmList.do'
+    item_selector: 'div.tr_group'
+    title_selector: 'div.td a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '한국인터넷진흥원(ISMS-P)-공지'
+    url: 'https://isms-p.or.kr/ntcn/ntc/selectGnrlNtcList.do'
+    item_selector: 'div.tr_group'
+    title_selector: 'div.td a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '개인정보보호위원회 - 안내서'
+    url: 'https://www.pipc.go.kr/np/cop/bbs/selectBoardList.do?bbsId=BS217&mCode=D010030000'
+    item_selector: 'div.boardArea table tbody tr'
+    title_selector: 'td.boardTitle'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '개인정보보호위원회 - 공지사항(BS061)'
+    url: 'https://www.pipc.go.kr/np/cop/bbs/selectBoardList.do?bbsId=BS061&mCode=C010010000'
+    item_selector: 'div.boardArea table tbody tr'
+    title_selector: 'td.boardTitle'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '개인정보보호위원회 - 공지사항(BS216)'
+    url: 'https://www.pipc.go.kr/np/cop/bbs/selectBoardList.do?bbsId=BS216&mCode=G010020010'
+    item_selector: 'div.boardArea table tbody tr'
+    title_selector: 'td.boardTitle'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '한국인터넷진흥원(KISA)'
+    url: 'https://www.kisa.or.kr/2060207'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.sbj a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: 'KRCERT - 보고서/가이드'
+    url: 'https://krcert.or.kr/kr/bbs/list.do?menuNo=205021&bbsId=B0000127'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.sbj a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: 'KRCERT - 보안공지'
+    url: 'https://krcert.or.kr/kr/bbs/list.do?menuNo=205020&bbsId=B0000133'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.sbj a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: 'KRCERT - 공지사항'
+    url: 'https://krcert.or.kr/kr/bbs/list.do?menuNo=205022&bbsId=B0000132'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.sbj a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '금융감독원'
+    url: 'https://www.fss.or.kr/fss/bbs/B0000087/list.do?menuNo=200116&pageIndex='
+    item_selector: 'table tbody tr'
+    title_selector: 'td.title a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '금융위원회'
+    url: 'https://better.fsc.go.kr/fsc_new/replyCase/OpinionList.do?stNo=11&muNo=86&muGpNo=75'
+    source_type: 'json'
+    data_url: 'https://better.fsc.go.kr/fsc_new/replyCase/selectReplyCaseOpinionList.do'
+    method: 'POST'
+    payload:
+      draw: '1'
+      start: '0'
+      length: '10'
+    json_items_key: 'data'
+    json_title_key: 'title'
+    json_row_fields:
+      - rownumber
+      - category
+      - title
+      - opinionNumber
+      - status
+      - dpNm
+    max_items: 10 # 최대 게시글 확인 개수
