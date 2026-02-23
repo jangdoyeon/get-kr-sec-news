@@ -44,12 +44,17 @@ boards:
     item_selector: 'table tbody tr'
     title_selector: 'td.sbj a'
     max_items: 10 # 최대 게시글 확인 개수
-  - name: '금융감독원'
+  - name: '금융감독원 - 업무자료(정보기술IT)'
     url: 'https://www.fss.or.kr/fss/bbs/B0000087/list.do?menuNo=200116&pageIndex='
     item_selector: 'table tbody tr'
     title_selector: 'td.title a'
     max_items: 10 # 최대 게시글 확인 개수
-  - name: '금융위원회'
+  - name: '금융감독원 - 업무자료(개인정보보호)'
+    url: 'https://www.fss.or.kr/fss/bbs/B0000086/list.do?menuNo=200115'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.title a'
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '금융위원회 - 비조치의견서'
     url: 'https://better.fsc.go.kr/fsc_new/replyCase/OpinionList.do?stNo=11&muNo=86&muGpNo=75'
     source_type: 'json'
     data_url: 'https://better.fsc.go.kr/fsc_new/replyCase/selectReplyCaseOpinionList.do'
@@ -67,4 +72,9 @@ boards:
       - opinionNumber
       - status
       - dpNm
+    max_items: 10 # 최대 게시글 확인 개수
+  - name: '금융위원회 - 정보마당(자료실)'
+    url: 'https://www.fss.or.kr/fss/bbs/B0000086/list.do?menuNo=200115'
+    item_selector: 'table tbody tr'
+    title_selector: 'td.title a'
     max_items: 10 # 최대 게시글 확인 개수
